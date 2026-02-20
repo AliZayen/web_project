@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% for i in 1..3 %}
+    <article>
+    <h2>Titre de l'article {{ i }}</h2>
+    <div class="metadata">Édité le 12/01/2026</div>
+    <div class="content">
+    <img src="{{ asset('images/hp1.png') }}" height="200px" alt="Image de l'article">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl
+
+    consectetur.</p>
+
+    <a href="{{ path('anonymous_show') }}" class="btn btn-primary">Lire la suite</a>
+    </div>
+    </article>
+    {% endfor %}
+{%endblock%}
